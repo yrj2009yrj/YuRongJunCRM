@@ -27,7 +27,8 @@ CPersonManage::~CPersonManage()
     }
 }
 
-bool CPersonManage::mbAddDirector(float fFixedSalary, unsigned int iJobNumber, QString sName, QString sDepartment)
+bool CPersonManage::mbAddDirector(float fFixedSalary, unsigned int iJobNumber, QString sName,
+                                  QString sDepartment, bool bFlag)
 {
     CDirector * op_person = new CDirector;
     if(op_person == NULL){
@@ -39,13 +40,15 @@ bool CPersonManage::mbAddDirector(float fFixedSalary, unsigned int iJobNumber, Q
         op_person->mvSetDepartment(sDepartment);
         mmAll.insert(iJobNumber, op_person);
 
-        mvSetNewestJobNumber(iJobNumber);
-
+        if (bFlag) {
+            mvSetNewestJobNumber(iJobNumber);
+        }
         return true;
     }
 }
 
-bool CPersonManage::mbAddTechnician(float fWorkTime, float fHourlyWage, unsigned int iJobNumber, QString sName, QString sDepartment)
+bool CPersonManage::mbAddTechnician(float fWorkTime, float fHourlyWage, unsigned int iJobNumber,
+                                    QString sName, QString sDepartment, bool bFlag)
 {
     CTechnician * op_person = new CTechnician;
     if(op_person == NULL){
@@ -58,13 +61,15 @@ bool CPersonManage::mbAddTechnician(float fWorkTime, float fHourlyWage, unsigned
         op_person->mvSetHourlyWage(fHourlyWage);
         mmAll.insert(iJobNumber, op_person);
 
-        mvSetNewestJobNumber(iJobNumber);
-
+        if (bFlag) {
+            mvSetNewestJobNumber(iJobNumber);
+        }
         return true;
     }
 }
 
-bool CPersonManage::mbAddSeller(float fTotalSales, float fCommissionRate, unsigned int iJobNumber, QString sName, QString sDepartment)
+bool CPersonManage::mbAddSeller(float fTotalSales, float fCommissionRate, unsigned int iJobNumber,
+                                QString sName, QString sDepartment, bool bFlag)
 {
     CSeller * op_person = new CSeller;
     if(op_person == NULL){
@@ -77,13 +82,15 @@ bool CPersonManage::mbAddSeller(float fTotalSales, float fCommissionRate, unsign
         op_person->mvSetCommissionRate(fCommissionRate);
         mmAll.insert(iJobNumber, op_person);
 
-        mvSetNewestJobNumber(iJobNumber);
-
+        if (bFlag) {
+            mvSetNewestJobNumber(iJobNumber);
+        }
         return true;
     }
 }
 
-bool CPersonManage::mbAddSalesManager(float fBasicSalary, float fTotalSales, float fCommissionRate, unsigned int iJobNumber, QString sName, QString sDepartment)
+bool CPersonManage::mbAddSalesManager(float fBasicSalary, float fTotalSales, float fCommissionRate,
+                                      unsigned int iJobNumber, QString sName, QString sDepartment, bool bFlag)
 {
     CSalesManager * op_person = new CSalesManager;
     if(op_person == NULL){
@@ -97,8 +104,9 @@ bool CPersonManage::mbAddSalesManager(float fBasicSalary, float fTotalSales, flo
         op_person->mvSetCommissionRate(fCommissionRate);
         mmAll.insert(iJobNumber, op_person);
 
-        mvSetNewestJobNumber(iJobNumber);
-
+        if (bFlag) {
+            mvSetNewestJobNumber(iJobNumber);
+        }
         return true;
     }
 }
@@ -126,13 +134,13 @@ void CPersonManage::mvModifyPerson(QString sCurItem, QString str)
 
     QStringList slist = str.split(';');
     if (slist[3] == "Director") {
-        mbAddDirector(slist[4].toFloat(), slist[0].toInt(), slist[1], slist[2]);
+        mbAddDirector(slist[4].toFloat(), slist[0].toInt(), slist[1], slist[2], false);
     } else if (slist[3] == "Technician") {
-        mbAddTechnician(slist[4].toFloat(), slist[5].toFloat(),  slist[0].toInt(), slist[1], slist[2]);
+        mbAddTechnician(slist[4].toFloat(), slist[5].toFloat(),  slist[0].toInt(), slist[1], slist[2], false);
     } else if (slist[3] == "Seller") {
-        mbAddSeller(slist[4].toFloat(), slist[5].toFloat(),  slist[0].toInt(), slist[1], slist[2]);
+        mbAddSeller(slist[4].toFloat(), slist[5].toFloat(),  slist[0].toInt(), slist[1], slist[2], false);
     } else if (slist[3] == "SalesManager") {
-        mbAddSalesManager(slist[4].toFloat(), slist[5].toFloat(), slist[6].toFloat(), slist[0].toInt(), slist[1], slist[2]);
+        mbAddSalesManager(slist[4].toFloat(), slist[5].toFloat(), slist[6].toFloat(), slist[0].toInt(), slist[1], slist[2], false);
     }
 }
 
