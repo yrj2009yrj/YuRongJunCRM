@@ -10,10 +10,10 @@ public:
     CPersonManage();
     ~CPersonManage();
 
-    bool mbAddDirector(float fFixedSalary, unsigned int iJobNumber, QString sName, QString sDepartment);
-    bool mbAddTechnician(float fWorkTime, float fHourlyWage, unsigned int iJobNumber, QString sName, QString sDepartment);
-    bool mbAddSeller(float fTotalSales, float fCommissionRate, unsigned int iJobNumber, QString sName, QString sDepartment);
-    bool mbAddSalesManager(float fBasicSalary, float fTotalSales, float fCommissionRate, unsigned int iJobNumber, QString sName, QString sDepartment);
+    bool mbAddDirector(float fFixedSalary, unsigned int iJobNumber, QString sName, QString sDepartment, bool bFlag = true);
+    bool mbAddTechnician(float fWorkTime, float fHourlyWage, unsigned int iJobNumber, QString sName, QString sDepartment, bool bFlag = true);
+    bool mbAddSeller(float fTotalSales, float fCommissionRate, unsigned int iJobNumber, QString sName, QString sDepartment, bool bFlag = true);
+    bool mbAddSalesManager(float fBasicSalary, float fTotalSales, float fCommissionRate, unsigned int iJobNumber, QString sName, QString sDepartment, bool bFlag = true);
 
     void mvAddPerson(QString str);
     void mvModifyPerson(QString sCurItem, QString str);

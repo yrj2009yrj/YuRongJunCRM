@@ -175,163 +175,94 @@ void CMainWin::msltSearchClicked()
 
 void CMainWin::setupUi()
 {
-    if (this->objectName().isEmpty())
-        this->setObjectName(QStringLiteral("CMainWin"));
     this->resize(1012, 564);
     this->setStyleSheet(QLatin1String("QPushButton {\n"
-"	font: 22pt \"Baskerville Old Face\";\n"
-"	background-color: rgba(18, 62, 111, 200);\n"
-"	color:rgb(230, 230, 230);\n"
-"}\n"
-"\n"
-"QLineEdit { \n"
-"	font: 16pt \"Arial Rounded MT Bold\";\n"
-"}\n"
-"\n"
-"QComboBox { \n"
-"	font: 16pt \"Arial Rounded MT Bold\"; \n"
-"}\n"
-"\n"
-"\n"
-"QLabel { \n"
-"	font: 22pt \"Baskerville Old Face\";\n"
-"}\n"
-"\n"
-"QTabWidget { \n"
-"	font: 12pt \"Arial Rounded MT Bold\"; \n"
-"}\n"
-"\n"
-"QListWidget { \n"
-"	font: 15pt \"Arial Rounded MT Bold\"; \n"
-"}\n"
-"\n"
-"QTableWidget { \n"
-"	font: 12pt \"Arial Rounded MT Bold\"; \n"
-"}\n"
-"\n"
-"\n"
-""));
+            "font: 22pt \"Baskerville Old Face\";\n"
+            "background-color: rgba(18, 62, 111, 200);\n"
+            "color:rgb(230, 230, 230);\n"
+            "}\n"
+            "QLineEdit { \n"
+            "font: 16pt \"Arial Rounded MT Bold\";\n"
+            "}\n"
+            "QComboBox { \n"
+            "font: 16pt \"Arial Rounded MT Bold\"; \n"
+            "}\n"
+            "\n"
+            "QLabel { \n"
+            "font: 22pt \"Baskerville Old Face\";\n"
+            "}\n"
+            "QTabWidget { \n"
+            "font: 12pt \"Arial Rounded MT Bold\"; \n"
+            "}\n"
+            "QListWidget { \n"
+            "font: 15pt \"Arial Rounded MT Bold\"; \n"
+            "}\n"
+            "\n"
+            "QTableWidget { \n"
+            "font: 12pt \"Arial Rounded MT Bold\"; \n"
+            "}\n"));
     mopWidCentral = new QWidget(this);
-    mopWidCentral->setObjectName(QStringLiteral("mopWidCentral"));
     horizontalLayout_2 = new QHBoxLayout(mopWidCentral);
     horizontalLayout_2->setSpacing(6);
     horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
-    horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
     mopWidTab = new QTabWidget(mopWidCentral);
-    mopWidTab->setObjectName(QStringLiteral("mopWidTab"));
     mopWidView1 = new QWidget();
-    mopWidView1->setObjectName(QStringLiteral("mopWidView1"));
     horizontalLayout = new QHBoxLayout(mopWidView1);
     horizontalLayout->setSpacing(6);
     horizontalLayout->setContentsMargins(11, 11, 11, 11);
-    horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
     mopListWidget = new QListWidget(mopWidView1);
-    mopListWidget->setObjectName(QStringLiteral("mopListWidget"));
-
     horizontalLayout->addWidget(mopListWidget);
-
     mopHorizontalSpacer1 = new QSpacerItem(91, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
     horizontalLayout->addItem(mopHorizontalSpacer1);
-
     mopGridLayout = new QGridLayout();
     mopGridLayout->setSpacing(6);
-    mopGridLayout->setObjectName(QStringLiteral("mopGridLayout"));
     moplabJobNumber = new QLabel(mopWidView1);
-    moplabJobNumber->setObjectName(QStringLiteral("moplabJobNumber"));
-
     mopGridLayout->addWidget(moplabJobNumber, 0, 0, 1, 1);
-
     moplabJobNumberS = new QLabel(mopWidView1);
-    moplabJobNumberS->setObjectName(QStringLiteral("moplabJobNumberS"));
-
     mopGridLayout->addWidget(moplabJobNumberS, 0, 1, 1, 1);
-
     moplabName = new QLabel(mopWidView1);
-    moplabName->setObjectName(QStringLiteral("moplabName"));
-
     mopGridLayout->addWidget(moplabName, 1, 0, 1, 1);
-
     moplabNameS = new QLabel(mopWidView1);
-    moplabNameS->setObjectName(QStringLiteral("moplabNameS"));
-
     mopGridLayout->addWidget(moplabNameS, 1, 1, 1, 1);
-
     moplabDepartment = new QLabel(mopWidView1);
-    moplabDepartment->setObjectName(QStringLiteral("moplabDepartment"));
-
     mopGridLayout->addWidget(moplabDepartment, 2, 0, 1, 1);
-
     moplabDepartmentS = new QLabel(mopWidView1);
-    moplabDepartmentS->setObjectName(QStringLiteral("moplabDepartmentS"));
-
     mopGridLayout->addWidget(moplabDepartmentS, 2, 1, 1, 1);
-
     moplabJobType = new QLabel(mopWidView1);
-    moplabJobType->setObjectName(QStringLiteral("moplabJobType"));
-
     mopGridLayout->addWidget(moplabJobType, 3, 0, 1, 1);
-
     moplabJobTypeS = new QLabel(mopWidView1);
-    moplabJobTypeS->setObjectName(QStringLiteral("moplabJobTypeS"));
-
     mopGridLayout->addWidget(moplabJobTypeS, 3, 1, 1, 1);
-
     moplabSalary = new QLabel(mopWidView1);
-    moplabSalary->setObjectName(QStringLiteral("moplabSalary"));
-
     mopGridLayout->addWidget(moplabSalary, 4, 0, 1, 1);
-
     moplabSalaryS = new QLabel(mopWidView1);
-    moplabSalaryS->setObjectName(QStringLiteral("moplabSalaryS"));
-
     mopGridLayout->addWidget(moplabSalaryS, 4, 1, 1, 1);
-
-
     horizontalLayout->addLayout(mopGridLayout);
-
     mopHorizontalSpacer2 = new QSpacerItem(91, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
     horizontalLayout->addItem(mopHorizontalSpacer2);
-
     mopVerticalLayout = new QVBoxLayout();
     mopVerticalLayout->setSpacing(6);
-    mopVerticalLayout->setObjectName(QStringLiteral("mopVerticalLayout"));
     mopVerticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
     mopVerticalLayout->addItem(mopVerticalSpacer);
-
     mopbtnAdd = new QPushButton(mopWidView1);
-    mopbtnAdd->setObjectName(QStringLiteral("mopbtnAdd"));
     QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
     sizePolicy.setHorizontalStretch(0);
     sizePolicy.setVerticalStretch(0);
     sizePolicy.setHeightForWidth(mopbtnAdd->sizePolicy().hasHeightForWidth());
     mopbtnAdd->setSizePolicy(sizePolicy);
-
     mopVerticalLayout->addWidget(mopbtnAdd);
-
     mopbtnModify = new QPushButton(mopWidView1);
-    mopbtnModify->setObjectName(QStringLiteral("mopbtnModify"));
     sizePolicy.setHeightForWidth(mopbtnModify->sizePolicy().hasHeightForWidth());
     mopbtnModify->setSizePolicy(sizePolicy);
-
     mopVerticalLayout->addWidget(mopbtnModify);
-
     mopbtnDelete = new QPushButton(mopWidView1);
-    mopbtnDelete->setObjectName(QStringLiteral("mopbtnDelete"));
     sizePolicy.setHeightForWidth(mopbtnDelete->sizePolicy().hasHeightForWidth());
     mopbtnDelete->setSizePolicy(sizePolicy);
-
     mopVerticalLayout->addWidget(mopbtnDelete);
-
     mopVerticalLayout->setStretch(0, 6);
     mopVerticalLayout->setStretch(1, 2);
     mopVerticalLayout->setStretch(2, 2);
     mopVerticalLayout->setStretch(3, 2);
-
     horizontalLayout->addLayout(mopVerticalLayout);
-
     horizontalLayout->setStretch(0, 2);
     horizontalLayout->setStretch(1, 1);
     horizontalLayout->setStretch(2, 4);
@@ -339,75 +270,46 @@ void CMainWin::setupUi()
     horizontalLayout->setStretch(4, 2);
     mopWidTab->addTab(mopWidView1, QString());
     mopWidView2 = new QWidget();
-    mopWidView2->setObjectName(QStringLiteral("mopWidView2"));
     horizontalLayout_3 = new QHBoxLayout(mopWidView2);
     horizontalLayout_3->setSpacing(6);
     horizontalLayout_3->setContentsMargins(11, 11, 11, 11);
-    horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
     mopTableWidget = new QTableWidget(mopWidView2);
-    mopTableWidget->setObjectName(QStringLiteral("mopTableWidget"));
-
     horizontalLayout_3->addWidget(mopTableWidget);
-
     mopVerticalLayoutR = new QVBoxLayout();
     mopVerticalLayoutR->setSpacing(6);
-    mopVerticalLayoutR->setObjectName(QStringLiteral("mopVerticalLayoutR"));
     mopJobCondition = new QLabel(mopWidView2);
-    mopJobCondition->setObjectName(QStringLiteral("mopJobCondition"));
     mopJobCondition->setMaximumSize(QSize(16777215, 35));
-
     mopVerticalLayoutR->addWidget(mopJobCondition);
-
     mopcbxCondition = new QComboBox(mopWidView2);
     mopcbxCondition->addItem(QString());
     mopcbxCondition->addItem(QString());
     mopcbxCondition->addItem(QString());
     mopcbxCondition->addItem(QString());
     mopcbxCondition->addItem(QString());
-    mopcbxCondition->setObjectName(QStringLiteral("mopcbxCondition"));
-
     mopVerticalLayoutR->addWidget(mopcbxCondition);
-
     mopVerticalSpacerR = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
     mopVerticalLayoutR->addItem(mopVerticalSpacerR);
-
     mopCustomCondition = new QLabel(mopWidView2);
-    mopCustomCondition->setObjectName(QStringLiteral("mopCustomCondition"));
     mopCustomCondition->setMaximumSize(QSize(16777215, 35));
-
     mopVerticalLayoutR->addWidget(mopCustomCondition);
-
     mopletCustom = new QLineEdit(mopWidView2);
-    mopletCustom->setObjectName(QStringLiteral("mopletCustom"));
-
     mopVerticalLayoutR->addWidget(mopletCustom);
-
     mopbtnSearch = new QPushButton(mopWidView2);
-    mopbtnSearch->setObjectName(QStringLiteral("mopbtnSearch"));
     mopbtnSearch->setMinimumSize(QSize(50, 50));
-
     mopVerticalLayoutR->addWidget(mopbtnSearch);
-
     mopVerticalLayoutR->setStretch(0, 2);
     mopVerticalLayoutR->setStretch(1, 2);
     mopVerticalLayoutR->setStretch(2, 5);
     mopVerticalLayoutR->setStretch(3, 2);
     mopVerticalLayoutR->setStretch(4, 2);
     mopVerticalLayoutR->setStretch(5, 2);
-
     horizontalLayout_3->addLayout(mopVerticalLayoutR);
-
     horizontalLayout_3->setStretch(0, 3);
     horizontalLayout_3->setStretch(1, 1);
     mopWidTab->addTab(mopWidView2, QString());
-
     horizontalLayout_2->addWidget(mopWidTab);
-
     this->setCentralWidget(mopWidCentral);
-
     retranslateUi();
-
     mopWidTab->setCurrentIndex(1);
 }
 
